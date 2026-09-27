@@ -1,0 +1,19 @@
+#Notice
+Copyright (c) 2026 chutiphong bunloed
+
+This repository contains the PUBLIC portion of the architecture:
+
+  ✓ High-level concept and architecture
+  ✓ Basic demo implementation
+  ✓ Public API signatures
+
+The following are NOT included and are kept private:
+
+  ✗ Full error-type mapping (R01–R15)
+  ✗ Full correction-path mapping (K01–K07)
+  ✗ Production implementation of 
+  ✗ Dynamic fold algorithm
+  ✗ Hardware-specific tuning
+
+For commercial licensing or full implementation:
+Contact: synthesis496@gmail.com
