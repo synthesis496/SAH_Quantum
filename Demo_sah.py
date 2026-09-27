@@ -1,5 +1,5 @@
-# Copyright (c) 2026 <Your Name>
-# SPDX-License-Identifier: Apache-2.0
+# Copyright (c) 2026 Chutiphong bunloed
+#All Rights Reserved.
 
 MU = 32
 CODESPACE = 0
