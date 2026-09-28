@@ -1,11 +1,14 @@
 # SAH_Quantum
-Demo&amp;Test
+Demo & Test
+DOI 10.5281/Zedono.23002686
+
+Inventor and Architect of this Quantum Logic: Chutiphong Bunloed (Buriram, Thailand
+
 # Sah Auto-Healing Quantum Error Correction
 
 Autonomous quantum error correction via symmetry-guided decay pathways.
 
 ## Concept
-
 - Detect errors without measuring qubits
 - Correct via geometric pathways, not operators
 - Built on D16+ even lattice
