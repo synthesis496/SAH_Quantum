@@ -2,7 +2,12 @@
 Demo & Test
 DOI 10.5281/Zedono.23002686
 
+sell Full IP
+
+e-mail:synthesis496@gmail.com
+
 Inventor and Architect of this Quantum Logic: Chutiphong Bunloed (Buriram, Thailand
+
 
 # Sah Auto-Healing Quantum Error Correction
 
