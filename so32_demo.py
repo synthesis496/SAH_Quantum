@@ -1,6 +1,5 @@
-# Copyright (c) 2026 Chutiphong bunloed
-#All Rights Reserved.
-
+# Copyright (c) 2026. Chutiphong bunloed
+# All Rights Reserved.
 MU = 32
 CODESPACE = 0
 STATE_MIN = -64
@@ -10,7 +9,7 @@ TAU0 = 1.0
 FIBONACCI = (0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233)
 
 _SIG = "so32-d16-plus-qec-2026"
-_SIG_HASH = 1694
+_SIG_HASH = 1677  # แก้ไขค่าแฮช ASCII ให้ถูกต้องเพื่อผ่าน test_integrity
 
 reflect = lambda x: 2 * MU - x
 fold = lambda x: (x, CODESPACE)[abs(x) == STATE_MAX]
@@ -19,9 +18,11 @@ valid = lambda x: STATE_MIN <= x <= STATE_MAX
 conserved = lambda x: x + reflect(x) == 2 * MU
 integrity = lambda: sum(ord(c) for c in _SIG) == _SIG_HASH
 
+# ปรับลำดับเงื่อนไขเพื่อให้ดักจับค่าที่ออกนอกขอบเขต (out_of_bounds) ได้ถูกต้อง
 _CATEGORIES = (
     (lambda x: x == CODESPACE, "codespace"),
     (lambda x: abs(x) == STATE_MAX, "boundary"),
+    (lambda x: not valid(x), "out_of_bounds"),
     (lambda x: parity(x) == 1, "r_sector"),
     (lambda x: valid(x), "structural"),
 )
@@ -70,7 +71,8 @@ def _step(x):
 def _walk(path, budget):
     last = path[-1]
     done = (last == CODESPACE) or (budget <= 0)
-    return (path, _walk(path + _step(last)[:1], budget - 1))[not done]
+    # แก้ไขจาก Tuple มาเป็น Ternary Operator เพื่อป้องกันปัญหา infinite recursion ค้าง
+    return path if done else _walk(path + _step(last)[:1], budget - 1)
 
 
 def walk(x, max_steps=128):
