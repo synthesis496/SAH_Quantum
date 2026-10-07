@@ -4,7 +4,7 @@ DOI 10.5281/Zedono.23002686
 orcid : 0009-0003-4295-7521
 
 
-© 2026 chutiphong bunloed
+Copyright@ 2026 chutiphong bunloed
 All Rights Reserved
 
 sell Full IP
