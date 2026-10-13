@@ -6,23 +6,7 @@
 
 Orcid : 0009-0003-4295-7521
 
-
-<p align="center">
-  <img src="FHF.jpg" alt="SAHQ Logo" width="220">
-</p>
-
-<p align="center">
-  <strong>A Complementary Non-von Neumann Field Continuum Engine for Passive Error Erasure</strong>
-</p>
-
-<p align="center">
-  <img src="https://shields.io" alt="License">
-  <img src="https://shields.io" alt="Python">
-  <img src="https://shields.io" alt="DOI">
-  <img src="https://shields.io" alt="Code Distance">
-</p>
-
----
+A Complementary Non-von Neumann Field Continuum Engine for Passive Error 
 
 ## Executive Overview & Architectural Advantages
 
