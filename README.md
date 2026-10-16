@@ -1,4 +1,4 @@
-# SAHQ: Symmetry-Autonomous Healing Quantum Suite 
+# SAHQ: Symmetry-Autonomous Healing Quantum Suite (type b)
 
 **Inventor:** Chutiphong Bunloed  
 
