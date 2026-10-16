@@ -32,19 +32,12 @@ Our vectorized throughput pipelines eliminate heavy nested loops and nested matr
 - **Unified Diagnostic & Autonomous Healing Path:** < **1.20 milliseconds (ms)** average per operation cycle.
 
 ### 📉 2. Quadratic Computational Scaling: \(O(d^{2.012})\)
-While conventional discrete error correction structures suffer from matrix-exponential bloat scaling at a restrictive O(d³) bottleneck, the SAHQ structural constraints map operations directly across field boundary arrays, optimizing the global execution down to a deterministic polynomial threshold of **\(O(d^{2.012})\)**.
+While conventional discrete error correction structures suffer from matrix-exponential bloat scaling at a restrictive O(d³) bottleneck, the SAHQ structural constraints map operations directly across field boundary arrays, optimizing the global execution down to a deterministic polynomial threshold of **.
 
 ### 📊 3. Architectural Efficiency vs. Conventional Surface Codes
 Through our native `compare()` telemetry, SAHQ achieves an unprecedented logical density by replacing spatial qubit inflation with continuous time-domain scaling:
 
 | Telemetry Metrics | Conventional Surface Code | SAHQ Architecture (Type B) |
-| :--- | :---: | :---: |
-| **Code Distance (d)** | d = 23 | **d ≥ 23** |
-| **Required Physical Elements** | 528 Qubits (23 × 23 - 1) | **129 Linear State Nodes** |
-| **Active Syndrome Measurement** | Required (High Overhead) | **False (Measurement-Free)** |
-| **Pauli Operator Dependence** | Mandatory | **False (Qubit-Free Field)** |
-
----
 
 ## Industry Integration (Plug-and-Play)
 
