@@ -11,15 +11,15 @@
 
 The **Symmetry-Autonomous Healing Quantum Suite (SAHQ)** is a continuous-variable field continuum simulator built to provide a **passive, zero-overhead error mitigation layer** for discrete quantum computing backends. 
 
-Unlike conventional active quantum error correction (QEC) codes that continuously sample the state space (inducing measurement-induced collapse and massive thermal overhead), SAHQ leverages topological, symmetry-protected boundaries to enforce mathematical zero-sum error relaxation (\(E + \mathcal{M}E = 0\)).
+Unlike conventional active quantum error correction (QEC) codes that continuously sample the state space (inducing measurement-induced collapse and massive thermal overhead), SAHQ leverages topological, symmetry-protected boundaries to enforce mathematical zero-sum error relaxation:.
 
 ### 🔑 The Three Cryptographic & Physics Foundations
-1. **Quasi-Periodic Fibonacci Time Dynamics:** Error mitigation events are clocked to a discrete Dirac delta distribution driven by an irrational Fibonacci time progression (\(f_{n} = f_{n-1} + f_{n-2}\) mapped via the Golden Ratio \(\varphi \approx 1.618033\)). This structure fundamentally decouples environmental noise from the computing lattice grid.
+1. **Quasi-Periodic Fibonacci Time Dynamics:** Error mitigation events are clocked to a discrete Dirac delta distribution driven by an irrational Fibonacci time progression  mapped via the Golden Ratio . This structure fundamentally decouples environmental noise from the computing lattice grid.
 2. **Triple-Shield Topological Verification:** The core software boundary guarantees error containment via three invariant checkpoints:
-   * **Conservation Invariant:** Enforced via a modified 16-dimensional **\(D_{16}^+\) unimodular, self-dual lattice**.
-   * **Symmetry Gauge:** Managed through an exact **\(SO(32)\) Lie group generator map** (496 precise analytical dimensions).
-   * **Heterotic Mirror Pair Alignment:** Bound natively to an **\(E_8 \times E_8\) gauge group** topology (496 generators).
-3. **Deterministic Polynomial Scaling:** By replacing nested multi-qubit syndrome loops with vectorized mirror-inversion paths, global computation scales elegantly at an empirical threshold of \(\approx O(d^{2.012})\).
+   * **Conservation Invariant:** Enforced via a modified 16-dimensional **D16+ unimodular, self-dual lattice**.
+   * **Symmetry Gauge:** Managed through an exact **SO(32) Lie group generator map** (496 precise analytical dimensions).
+   * **Heterotic Mirror Pair Alignment:** Bound natively to an **E8 x E8 gauge group** topology (496 generators).
+3. **Deterministic Polynomial Scaling:** By replacing nested multi-qubit syndrome loops with vectorized mirror-inversion paths, global computation scales elegantly at an empirical threshold of approximately **O(d^2.012)**.
 
 ---
 
@@ -27,9 +27,9 @@ Unlike conventional active quantum error correction (QEC) codes that continuousl
 
 The architecture is explicitly decoupled into functional modules across the framework stack:
 
-* **`core.py` (Lattice and Constants Definition):** Declares system bounds (\(BOUND = 64, \mu = 32\)), sets up the \(D_{16}^+\), \(SO(32)\), and \(E_8 \times E_8\) group parameters, and constructs the deterministic discrete parity, reflection, and state mappings.
-* **`sahq_detect.py` (Multi-Gate Diagnostic Pipeline):** Implements the `Detector` class executing parallel boundary, parity, mirror, and conservation invariant evaluations. Maps arbitrary fault-vectors to classified \(R_{01}-R_{15}\) syndromes.
-* **`sahq_correct.py` (Autonomous State-Walking Engine):** Houses the `Corrector` module that maps fault syndromes to healing trajectories (\(K_{01}-K_{07}\) paths). Generates energy decay paths leading back to the stable \(\vert{}0\rangle\) codespace attractor.
+* **`core.py` (Lattice and Constants Definition):** Declares system bounds (BOUND = 64, MU = 32), sets up the D16+, SO32, and E8xE8 group parameters, and constructs the deterministic discrete parity, reflection, and state mappings.
+* **`sahq_detect.py` (Multi-Gate Diagnostic Pipeline):** Implements the `Detector` class executing parallel boundary, parity, mirror, and conservation invariant evaluations. Maps arbitrary fault-vectors to classified R01-R15 syndromes.
+* **`sahq_correct.py` (Autonomous State-Walking Engine):** Houses the `Corrector` module that maps fault syndromes to healing trajectories (K01-K07 paths). Generates energy decay paths leading back to the stable |0> codespace attractor.
 * **`sahq_engine.py` (Central Automation Core):** Orchestrates synchronization between the `FibonacciClock`, `LimitCycle` trajectory tracker, `Detector`, and `Corrector`.
 * **`test.py` (Formal Verification Suite):** Executes the full suite of mathematical validation routines—proving mirror involution consistency, limit cycle closure, and ensuring zero dead-ends or infinite loops in the healing loop.
 * **`product.py` (High-Performance Wrapper & Performance Profiler):** Exposes runtime configuration interfaces (`SAHQConfig`) and throughput benchmark engines (`SAHQBenchmark`) measuring microsecond-level matrix execution rates.
@@ -39,8 +39,8 @@ The architecture is explicitly decoupled into functional modules across the fram
 ## ⚡ Performance Profiling & Microsecond Latency
 
 Evaluated across standardized simulation platforms, execution benchmarks demonstrate excellent timing performance:
-* **Local Mirror & Fold Inversions:** \(\approx\) **10 to 30 microseconds (\(\mu s\))** per operational step.
-* **Unified Diagnostic & Autonomous Healing Sweep:** **< 1.20 milliseconds (\(ms\))** per full network diagnostic iteration.
+* **Local Mirror & Fold Inversions:** ~ **10 to 30 microseconds (us)** per operational step.
+* **Unified Diagnostic & Autonomous Healing Sweep:** **< 1.20 milliseconds (ms)** per full network diagnostic iteration.
 
 ---
 
@@ -133,3 +133,4 @@ For deep-tech technical due diligence sessions, please reach out directly to the
   doi       = {10.5281/zenodo.23002686}
 }
 ```
+
