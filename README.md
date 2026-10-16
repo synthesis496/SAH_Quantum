@@ -1,49 +1,126 @@
-# SAHQ: Symmetry-Autonomous Healing Quantum Suite (type b)
+# SAHQ: Symmetry-Autonomous Healing Quantum Suite (Type B)
 
-**Inventor:** Chutiphong Bunloed  
-
-**Copyright (c) 2026 Chutiphong Bunloed. All Rights Reserved.**
-
-Orcid : 0009-0003-4295-7521
-
-A Complementary Non-von Neumann Field Continuum Engine for Passive Error 
-
-## Executive Overview & Architectural Advantages
-
-The **Symmetry-Autonomous Healing Quantum Suite (SAHQ)** represents a highly optimized, continuous-variable field continuum designed to act as a **complementary, zero-overhead extension** for existing discrete quantum computing ecosystems. 
-
-By shifting the computational burden from active multi-qubit syndrome measurements to passive, topological field-level transformations, the SAHQ architecture delivers three profound structural advantages:
-
-*   **Passive & Autonomous Error Erasure (\(E + \mathcal{M}E = 0\)):** Phase noise and environmental fluctuations are structurally coerced into odd parity invariants. Upon intersecting the symmetric boundary mirrors, error vectors actively annihilate against their own reflection symmetry, achieving mathematical zero-sum erasure without requiring an active software-decoding layer.
-*   **Measurement-Free, Zero-Heat Dynamics (Δ Q = 0):** The system relies on a passive "State-Walking" automaton rather than discrete stabilizer syndrome measurements. This eliminates measurement-induced state collapse and complies with Landauer's thermodynamic boundary limits, ensuring error relaxation with near-zero heat dissipation.
-*   **Quasi-Periodic Gating Matrix:** System healing cycles are bound to a discrete Dirac delta distribution indexed to a deterministic Fibonacci time clock:
-........
-    Because these impulses dilate according to the irrational golden ratio (φ), environmental white noise is fundamentally decoupled from the internal phase grid, completely eliminating rational multi-frequency resonance recurrence.
+**Inventor & Core Architect:** Chutiphong Bunloed  
+**Copyright (c) 2026 Chutiphong Bunloed. All Rights Reserved.**  
+**ORCID ID:** [0009-0003-4295-7521](https://orcid.org)  
+**Contact for IP Inquiries:** synthesis496@gmail.com
 
 ---
 
-## Performance & Complexity Benchmarks
+## 🌌 Architectural Overview & Core Concepts
 
-The entire core codebase (including the lambda-optimized `sahq_core` and the vectorized state-tracking layer) has been stress-tested through comprehensive public test matrices (covering Symmetry, Transition, Detection, Correction, Timing, and Integration layers). 
+The **Symmetry-Autonomous Healing Quantum Suite (SAHQ)** is a continuous-variable field continuum simulator built to provide a **passive, zero-overhead error mitigation layer** for discrete quantum computing backends. 
 
-### ⚡ 1. Microsecond-Scale Operator Latency
-Our vectorized throughput pipelines eliminate heavy nested loops and nested matrix transformations. Evaluated across single-core simulation environments, execution parameters remain bounded to near-instant thresholds:
-- **Local Mirror & Fold Inversions:** ~ **10 to 30 microseconds (μ s)** per operation.
-- **Unified Diagnostic & Autonomous Healing Path:** < **1.20 milliseconds (ms)** average per operation cycle.
+Unlike conventional active quantum error correction (QEC) codes that continuously sample the state space (inducing measurement-induced collapse and massive thermal overhead), SAHQ leverages topological, symmetry-protected boundaries to enforce mathematical zero-sum error relaxation (\(E + \mathcal{M}E = 0\)).
 
-### 📉 2. Quadratic Computational Scaling: \(O(d^{2.012})\)
-While conventional discrete error correction structures suffer from matrix-exponential bloat scaling at a restrictive O(d³) bottleneck, the SAHQ structural constraints map operations directly across field boundary arrays, optimizing the global execution down to a deterministic polynomial threshold of **.
+### 🔑 The Three Cryptographic & Physics Foundations
+1. **Quasi-Periodic Fibonacci Time Dynamics:** Error mitigation events are clocked to a discrete Dirac delta distribution driven by an irrational Fibonacci time progression (\(f_{n} = f_{n-1} + f_{n-2}\) mapped via the Golden Ratio \(\varphi \approx 1.618033\)). This structure fundamentally decouples environmental noise from the computing lattice grid.
+2. **Triple-Shield Topological Verification:** The core software boundary guarantees error containment via three invariant checkpoints:
+   * **Conservation Invariant:** Enforced via a modified 16-dimensional **\(D_{16}^+\) unimodular, self-dual lattice**.
+   * **Symmetry Gauge:** Managed through an exact **\(SO(32)\) Lie group generator map** (496 precise analytical dimensions).
+   * **Heterotic Mirror Pair Alignment:** Bound natively to an **\(E_8 \times E_8\) gauge group** topology (496 generators).
+3. **Deterministic Polynomial Scaling:** By replacing nested multi-qubit syndrome loops with vectorized mirror-inversion paths, global computation scales elegantly at an empirical threshold of \(\approx O(d^{2.012})\).
 
-### 📊 3. Architectural Efficiency vs. Conventional Surface Codes
-Through our native `compare()` telemetry, SAHQ achieves an unprecedented logical density by replacing spatial qubit inflation with continuous time-domain scaling:
+---
 
-| Telemetry Metrics | Conventional Surface Code | SAHQ Architecture (Type B) |
+## 📂 Core Software Architecture (6-Module Infrastructure)
 
-## Industry Integration (Plug-and-Play)
+The architecture is explicitly decoupled into functional modules across the framework stack:
 
-SAHQ is built with an enterprise-grade service wrapper (`SAHQService`) that seamlessly converts continuous topological states into standard discrete gate matrices, acting as a modular plugin to enhance industry-standard toolkits:
-- **`to_qiskit(x)`**: Maps continuous field dynamics into standard IBM Qiskit circuits, including injected depolarizing noise-model telemetry.
-- **`to_cirq(x)`**: Exposes autonomous time-gating paths directly to Google Cirq simulation loops.
+* **`core.py` (Lattice and Constants Definition):** Declares system bounds (\(BOUND = 64, \mu = 32\)), sets up the \(D_{16}^+\), \(SO(32)\), and \(E_8 \times E_8\) group parameters, and constructs the deterministic discrete parity, reflection, and state mappings.
+* **`sahq_detect.py` (Multi-Gate Diagnostic Pipeline):** Implements the `Detector` class executing parallel boundary, parity, mirror, and conservation invariant evaluations. Maps arbitrary fault-vectors to classified \(R_{01}-R_{15}\) syndromes.
+* **`sahq_correct.py` (Autonomous State-Walking Engine):** Houses the `Corrector` module that maps fault syndromes to healing trajectories (\(K_{01}-K_{07}\) paths). Generates energy decay paths leading back to the stable \(\vert{}0\rangle\) codespace attractor.
+* **`sahq_engine.py` (Central Automation Core):** Orchestrates synchronization between the `FibonacciClock`, `LimitCycle` trajectory tracker, `Detector`, and `Corrector`.
+* **`test.py` (Formal Verification Suite):** Executes the full suite of mathematical validation routines—proving mirror involution consistency, limit cycle closure, and ensuring zero dead-ends or infinite loops in the healing loop.
+* **`product.py` (High-Performance Wrapper & Performance Profiler):** Exposes runtime configuration interfaces (`SAHQConfig`) and throughput benchmark engines (`SAHQBenchmark`) measuring microsecond-level matrix execution rates.
+
+---
+
+## ⚡ Performance Profiling & Microsecond Latency
+
+Evaluated across standardized simulation platforms, execution benchmarks demonstrate excellent timing performance:
+* **Local Mirror & Fold Inversions:** \(\approx\) **10 to 30 microseconds (\(\mu s\))** per operational step.
+* **Unified Diagnostic & Autonomous Healing Sweep:** **< 1.20 milliseconds (\(ms\))** per full network diagnostic iteration.
+
+---
+
+## 🛠️ Installation & Dependency Management
+
+The simulation workspace uses vectorized pipelines and relies on standard modern scientific computing ecosystems alongside commercial quantum middleware packages.
+
+```bash
+pip install numpy qiskit cirq
+```
+
+---
+
+## 🚀 Quick Start Guide (Executing the Benchmark Suite)
+
+You can spin up the full simulation matrix, generate performance statistics, and review mathematical invariant telemetry immediately using the script interface below:
+
+```python
+import numpy as np
+# Import the main wrapper from product.py 
+# (Ensure your execution path has access to core.py, sahq_detect.py, sahq_correct.py, sahq_engine.py, test.py)
+from product import SAHQ
+
+# 1. Initialize the unified SAHQ stack with core baseline defaults
+sahq_system = SAHQ()
+
+# 2. Run the internal formal verification suite
+print("=== Running Formal Verification Tests ===")
+verify_res = sahq_system.verify_summary()
+print(f"Tests Passed: {verify_res['passed']} / {verify_res['total']}")
+print(f"Global Invariant Integrity: {verify_res['all_pass']}")
+
+# 3. Simulate an autonomous state relaxation trajectory for an out-of-bounds fault state (e.g., x0 = 15)
+print("\n=== Executing Error Healing Simulation ===")
+healing_summary = sahq_system.summary(x0=15, n_ticks=16)
+print(f"Initial Error State (x0): {healing_summary['x0']}")
+print(f"Classified Syndrome State (R): {healing_summary['R']}")
+print(f"Allocated Healing Path (K): {healing_summary['K']}")
+print(f"Final Restored Code State: {healing_summary['final']} (Target: 0)")
+
+# 4. Generate system-wide execution throughput profiles
+print("\n=== Generating System Benchmarks ===")
+report = sahq_system.bench(n_iter=100)
+print(f"Detection Throughput: {report['detection']['rate']:.2f} ops/sec")
+print(f"Correction Throughput: {report['correction']['rate']:.2f} ops/sec")
+```
+
+---
+
+## ⚙️ Custom Hardware Parameter Tuning
+
+The framework architecture is built specifically to accommodate dynamic noise-profile mapping for downstream hardware architectures. QEC hardware engineers can inject their operational boundaries directly via `SAHQConfig`:
+
+```python
+from product import SAHQ
+
+sahq_system = SAHQ()
+
+# Fine-tune calibration values to align with real physical qubit chip topologies (e.g., Google Sycamore / Willow)
+sahq_system.config.update(
+    mu=32,        # Set physical field density centers
+    bound=64,     # Establish rigid noise confinement limits
+    a=-0.1,       # Calibrate phase decay coefficients
+    beta=1.0      # Scale hardware coupling strength parameters
+)
+
+# Re-run diagnostic profiles under new constraints
+updated_report = sahq_system.report()
+```
+
+---
+
+## 🤝 Technology Transfer, Contribution & Licensing
+
+The structural foundations and simulation codebases within this suite are highly optimized for enterprise scale. 
+
+* **Open-Source Stream:** The core interfaces are maintained under the **AGPL-3.0 License** to promote public academic reproducibility.
+* **Proprietary & Enterprise Transfer:** Comprehensive structural specifications, continuous-limit mathematical proofs, and architectural blueprints are prepared for enterprise IP buyouts or institutional licensing under strict Non-Disclosure Agreements (NDA).
+
+For deep-tech technical due diligence sessions, please reach out directly to the inventor at: **synthesis496@gmail.com**.
 
 ## Research Citation & Licensing Inquiries
 
@@ -56,17 +133,3 @@ SAHQ is built with an enterprise-grade service wrapper (`SAHQService`) that seam
   doi       = {10.5281/zenodo.23002686}
 }
 ```
-
-**Notice for Intellectual Property Acquisitions:** The entire IP portfolio, including all historical R&D software assets, multi-scale lattice prototypes, and active staging repositories, is held under unified ownership and is fully prepared for structured buyout or institutional licensing. 
-
-## Enterprise Technology Transfer & Proprietary Licensing
-The complete high-performance execution suite, continuous-limit mathematical blueprints, and verified simulation environments are proprietary intellectual property assets optimized for scalability.
-
-Comprehensive code audits, formal mathematical verification sessions, and total IP ownership transfer are available exclusively to qualified deep-tech enterprises and sovereign research laboratories under a strict **Non-Disclosure Agreement (NDA)**.
-
-**Inquiries for Technical Due Diligence & IP Acquisition:**  
-
-**synthesis496@gmail.com**
-
-**Copyright (c) 2026 Chutiphong Bunloed. All Rights Reserved.**
-
