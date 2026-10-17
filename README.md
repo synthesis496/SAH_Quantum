@@ -130,7 +130,7 @@ For deep-tech technical due diligence sessions, please reach out directly to the
   title     = {Symmetry-Autonomous Healing Quantum Architecture in Infinite Domains},
   year      = {2026},
   publisher = {Zenodo},
-  doi       = {10.5281/zenodo.23002686}
+  doi       = {10.5281/zenodo.23443406}
 }
 ```
 
