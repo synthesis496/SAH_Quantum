@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: "Bunloed"
+    given-names: "Chutiphong"
+    orcid: "https://orcid.org"
+title: "SAH_Quantum: Symmetry-Autonomous Healing Quantum Suite (Type B)"
+version: "1.0.0"
+doi: "10.5281/zenodo.23443406"
+date-released: "2026-10-26"
+url: "https://github.com/synthesis496/SAH_Quantum"
