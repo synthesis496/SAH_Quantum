@@ -5,7 +5,9 @@
 **ORCID ID:** [0009-0003-4295-7521](https://orcid.org)  
 **Contact for IP Inquiries:** synthesis496@gmail.com
 
----
+## Support & Star 🌟
+If you find this Quantum Error Correction architecture useful, or if it helps with your research, please consider giving this repository a **Star**! It helps increase visibility and keeps me motivated to maintain the project. 
+
 
 ## 🌌 Architectural Overview & Core Concepts
 
