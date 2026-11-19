@@ -3,7 +3,7 @@
 **Inventor & Core Architect:** Chutiphong Bunloed  
 **Copyright (c) 2026 Chutiphong Bunloed. All Rights Reserved.**  
 **ORCID ID:** [0009-0003-4295-7521](https://orcid.org)  
-**Contact for IP Inquiries:** synthesis496@gmail.com
+**Contact:** synthesis496@gmail.com
 
 ## Support & Star 🌟
 If you find this Quantum Error Correction architecture useful, or if it helps with your research, please consider giving this repository a **Star**! It helps increase visibility and keeps me motivated to maintain the project. 
@@ -115,16 +115,9 @@ updated_report = sahq_system.report()
 
 ---
 
-## 🤝 Technology Transfer, Contribution & Licensing
+ **synthesis496@gmail.com**.
 
-The structural foundations and simulation codebases within this suite are highly optimized for enterprise scale. 
-
-* **Open-Source Stream:** The core interfaces are maintained under the **AGPL-3.0 License** to promote public academic reproducibility.
-* **Proprietary & Enterprise Transfer:** Comprehensive structural specifications, continuous-limit mathematical proofs, and architectural blueprints are prepared for enterprise IP buyouts or institutional licensing under strict Non-Disclosure Agreements (NDA).
-
-For deep-tech technical due diligence sessions, please reach out directly to the inventor at: **synthesis496@gmail.com**.
-
-## Research Citation & Licensing Inquiries
+##  Citation
 
 ```bibtex
 @misc{bunloed2026sahq,
